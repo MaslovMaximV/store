@@ -5,7 +5,8 @@ from products.models import Product, ProductCategory
 # Create your views here.
 
 def index(request):
-    return render(request, 'products/index.html')
+    context = {'title': 'Store'}
+    return render(request, 'products/index.html', context)
 
 def products(request):
     context = {
